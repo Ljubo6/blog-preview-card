@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    /*color*/
+        /*Primary*/
+        --yellow: hsl(47, 88%, 63%);
+
+        /*Neutral*/
+        --white: hsl(0, 0%, 100%);
+        --gray: hsl(0, 0%, 50%);
+        --black: hsl(0, 0%, 7%);
+
+    /*typography*/
+    --family: "Figtree", sans-serif;
+    --fs-base: 16px;
+    --weight-normal:500;
+    --weight-bold:800;
+
+    /*borders*/
+    --radii: 20px;
+    --radii-blog:15px;
+    --radii-btn:4px;
+}
+body{
+    margin: 0;
+    font-family: var(--family);
+    font-size: var(--fs-base);
+    background-color: var(--yellow);
+}
+.container{
+    min-height: 100vh;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.frame{
+    width: 327px;
+    height: auto;
+    padding: 24px;
+    border-radius: var(--radii);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid var(--black);
+    box-shadow: 15px 15px 0px 0px rgba(0,0,0,0.75);
+}
+.blogimage{
+    border-radius: var(--radii-blog);
+    height: 200px;
+    background-image: url("./assets/images/illustration-article.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+}
+.dateInfo,.head3, .description{
+    margin: 0;
+}
+.btn{
+    border: none;
+    padding: 4px 12px;
+    background-color: var(--yellow);
+    border-radius: var(--radii-btn);
+    font-family: var(--family);
+    font-weight: var(--weight-bold);
+    box-shadow: 0px 5px 7px 0px rgba(173,166,173,1);
+
+}
+.dateInfo{
+    font-weight: var(--weight-normal);
+    font-size: 13px;
+}
+.description{
+    font-size: 14px;
+    color: var(--gray);
+}
+.author-wrapper{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+.author{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.avatar{
+    width: 32px;
+    height: 32px;
+
+}
+.img-avatar{
+    width: 100%;
+}
+.username{
+    font-weight: var(--weight-bold);
+}
+@media (min-width: 1024px){
+    .frame{
+        width: 384px;
+        height: auto;
+    }
+    .dateInfo{
+        font-size: 15px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .btn{
+        box-shadow: none;
+    }
+    .head3:hover{
+        cursor: pointer;
+        color: var(--yellow);
+    }
+}
